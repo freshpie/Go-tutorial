@@ -1,4 +1,4 @@
-package Exam03
+package main
 
 func main() {
   total := 100 // 100은 실제 값 = 리터럴

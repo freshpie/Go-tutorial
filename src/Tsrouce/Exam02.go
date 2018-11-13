@@ -1,4 +1,4 @@
-package Exam02
+package main
 
 
 
