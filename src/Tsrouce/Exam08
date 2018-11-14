@@ -1,0 +1,64 @@
+package Exam08
+
+func main()  {
+  myNamePrint()
+  myAgePrint("홍길동")
+  address := myAddress()
+  birth := myBirth("홍길동")  // pass by value
+  temp := "2000-11-11"
+  birth2 := myBirth(temp) // pass by Value
+
+  //pass by reference
+  myBirth2(&temp)
+
+  // 가변인자 함수 (Variadic Function)
+  myEamil("a", "@", "aaa.com")
+}
+
+//가변인자(매개변수) 전달 함수
+func myEamil(e ...string)  {
+  // 가변인자의 경우 여러개의 데이터가
+  // 몇개인지 그때 그 때다르니
+  // for ~ range 구문을 추천
+  for i := 1; i <= 3; i++ {
+    // 처리
+  }
+
+  for index, es := range e {
+    // 조금 더 좋음 index는 기본값
+  }
+  /*
+  for 초기값; 조건식; 증분값 {
+
+  }
+  */
+}
+
+// 매개변수가 참조 전달
+func myBirth2(t *string)  {
+  *t = "1111-11-30"
+}
+
+// 매개변수 없는 함수
+func myNamePrint() {
+  var name string = "홍길동"
+}
+
+//매개변수 없고 돌려줄 값이 있는 함수
+func myAddress() string {
+  addr := "서울시 서초구 방배동"
+  return addr
+}
+
+// 매개변수 있는 함수
+func myAgePrint(name string) {
+  if name == "홍길동" {
+    age := 20
+  }
+}
+// 매개변수 있고 리턴타입이 있는 함수
+func myBirth(temp string) string {
+  var bir string = "2018-11-13"
+  temp = "2222-11-10"
+  return bir
+}
