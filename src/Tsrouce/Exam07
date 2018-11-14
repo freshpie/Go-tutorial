@@ -1,8 +1,0 @@
-package Exam07 
-
-func  main()  {
-  var name string
-  name = "홍길동"
-
-  println(name)
-}
